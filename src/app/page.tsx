@@ -6,7 +6,7 @@ async function HomePage() {
   const user = await getUser();
 
   return (
-    <div className="bg-slate-700 p-4">
+    <div className="mt-20 text-center">
       {user ? (
         <SignOutButton />
       ) : (
