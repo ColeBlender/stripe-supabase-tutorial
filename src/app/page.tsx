@@ -1,6 +1,7 @@
 import { getUser } from "@/supabase/auth/server";
 import Link from "next/link";
 import SignOutButton from "./components/SignOutButton";
+import SubscribeButton from "./components/SubscribeButton";
 
 async function HomePage() {
   const user = await getUser();
@@ -8,7 +9,11 @@ async function HomePage() {
   return (
     <div className="mt-20 text-center">
       {user ? (
-        <SignOutButton />
+        <div className="flex flex-col items-center gap-10">
+          <SignOutButton />
+
+          <SubscribeButton userId={user.id} />
+        </div>
       ) : (
         <Link
           href="/login"

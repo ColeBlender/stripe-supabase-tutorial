@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "migrate": "pnpm drizzle-kit generate && pnpm tsx src/supabase/db/migrate.ts"
+    "migrate": "pnpm drizzle-kit generate && pnpm tsx src/supabase/db/migrate.ts",
+    "stripe": "stripe listen --forward-to localhost:3000/api/stripe"
   },
   "dependencies": {
     "@supabase/ssr": "^0.5.0",
@@ -17,7 +18,8 @@
     "next": "14.2.6",
     "postgres": "^3.4.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "stripe": "^16.8.0"
   },
   "devDependencies": {
     "@types/node": "^20",
