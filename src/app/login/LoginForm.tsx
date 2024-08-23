@@ -43,7 +43,10 @@ function LoginForm() {
         disabled={isPending}
       />
 
-      <button disabled={isPending} className="mt-5">
+      <button
+        disabled={isPending}
+        className="bg-slate-400 text-white p-2 rounded-lg mt-5"
+      >
         {isPending ? "Logging in..." : "Login With Email"}
       </button>
     </form>
