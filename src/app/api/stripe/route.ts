@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      "whsec_6ebd3ee570976f32bf0f2a6ce4293abeb5df228e3252a55881f32baf8f7a189a",
+      "whsec_yourSigningSecret",
     );
   } catch (error) {
     console.error(error);
